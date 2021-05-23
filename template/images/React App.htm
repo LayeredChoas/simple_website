@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)http://localhost:3000/product/1 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="icon" href="http://localhost:3000/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Web site created using create-react-app">
+    <link rel="apple-touch-icon" href="http://localhost:3000/logo192.png">
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://localhost:3000/manifest.json">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <link rel="stylesheet" href="./React App_files/font-awesome.min.css">
+    <title>React App</title>
+  <style>
+
+html{
+  font-size: 62.5%;
+  box-sizing: border-box; /* To Hadnle Box In The Body*/
+}
+
+body{
+  margin: 0;
+  height: 100vh;
+  font-size: 1.6rem;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root{
+  height: 100%;
+}
+
+.grid-container{
+  display: grid;
+  grid-template-areas: 
+  'header'
+  'main'
+  'footer';
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 5rem;
+  height: 100%;
+}
+
+
+header{
+  grid-area: header;
+  background-color: #203040;
+  
+}
+main{
+  grid-area: main;
+  padding: 1rem;
+}
+
+a{
+  text-decoration: none;
+}
+a:hover{
+  color: chocolate;
+}
+
+a.brand{  /*   a that have brand class */
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+}
+header a{  /*  All a Inside Header */
+  color: white;
+  padding: 1rem;
+}
+
+footer{
+  grid-area: footer;
+  background-color: #203040;
+  color: blanchedalmond;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.row.center{
+  justify-content: center;
+}
+
+/* Image */
+
+img.medium{
+  max-width: 29rem;
+  width: 100%;
+}
+
+img{
+  border-radius: 0.5rem;
+}
+
+/* Card */
+
+.product{
+  border: 0.1rem #c0c0c0 solid;
+  background-color:#f8f8f8;
+  border-radius: 0.5rem;
+  margin: 1rem;
+}
+
+h1{
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+
+h2{
+  font-size: 1.6rem;
+  padding: 1rem 0;
+}
+
+h3{
+  font-size: 1.2rem;
+  color: grey;
+}
+
+.card-body
+{
+  padding: 1rem;
+}
+
+/* All Children Of card-body*/
+
+.card-body > * {
+  margin-bottom: 0.5rem;
+}
+
+.rating span{
+  color: goldenrod;
+}
+
+span.review{
+  color: black;
+  font-family: area;
+}
+
+.price{
+  font-size: 2rem;
+  font-family: cursive;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9zcmMvaW5kZXguY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBRUE7RUFDRSxnQkFBZ0I7RUFDaEIsc0JBQXNCLEVBQUUsNkJBQTZCO0FBQ3ZEOztBQUVBO0VBQ0UsU0FBUztFQUNULGFBQWE7RUFDYixpQkFBaUI7RUFDakIseUNBQXlDO0VBQ3pDLG1DQUFtQztFQUNuQyxrQ0FBa0M7QUFDcEM7O0FBRUE7RUFDRSxZQUFZO0FBQ2Q7O0FBRUE7RUFDRSxhQUFhO0VBQ2I7OztVQUdRO0VBQ1IsMEJBQTBCO0VBQzFCLGlDQUFpQztFQUNqQyxZQUFZO0FBQ2Q7OztBQUdBO0VBQ0UsaUJBQWlCO0VBQ2pCLHlCQUF5Qjs7QUFFM0I7QUFDQTtFQUNFLGVBQWU7RUFDZixhQUFhO0FBQ2Y7O0FBRUE7RUFDRSxxQkFBcUI7QUFDdkI7QUFDQTtFQUNFLGdCQUFnQjtBQUNsQjs7QUFFQSxVQUFVLDhCQUE4QjtFQUN0QyxZQUFZO0VBQ1osZUFBZTtFQUNmLGlCQUFpQjtBQUNuQjtBQUNBLFdBQVcseUJBQXlCO0VBQ2xDLFlBQVk7RUFDWixhQUFhO0FBQ2Y7O0FBRUE7RUFDRSxpQkFBaUI7RUFDakIseUJBQXlCO0VBQ3pCLHFCQUFxQjtBQUN2Qjs7QUFFQTtFQUNFLGFBQWE7RUFDYixlQUFlO0VBQ2YsOEJBQThCO0VBQzlCLG1CQUFtQjtBQUNyQjs7QUFFQTtFQUNFLHVCQUF1QjtBQUN6Qjs7QUFFQSxVQUFVOztBQUVWO0VBQ0UsZ0JBQWdCO0VBQ2hCLFdBQVc7QUFDYjs7QUFFQTtFQUNFLHFCQUFxQjtBQUN2Qjs7QUFFQSxTQUFTOztBQUVUO0VBQ0UsNEJBQTRCO0VBQzVCLHdCQUF3QjtFQUN4QixxQkFBcUI7RUFDckIsWUFBWTtBQUNkOztBQUVBO0VBQ0UsaUJBQWlCO0VBQ2pCLGVBQWU7QUFDakI7O0FBRUE7RUFDRSxpQkFBaUI7RUFDakIsZUFBZTtBQUNqQjs7QUFFQTtFQUNFLGlCQUFpQjtFQUNqQixXQUFXO0FBQ2I7O0FBRUE7O0VBRUUsYUFBYTtBQUNmOztBQUVBLDZCQUE2Qjs7QUFFN0I7RUFDRSxxQkFBcUI7QUFDdkI7O0FBRUE7RUFDRSxnQkFBZ0I7QUFDbEI7O0FBRUE7RUFDRSxZQUFZO0VBQ1osaUJBQWlCO0FBQ25COztBQUVBO0VBQ0UsZUFBZTtFQUNmLG9CQUFvQjtFQUNwQixpQkFBaUI7QUFDbkIiLCJzb3VyY2VzQ29udGVudCI6WyJcblxuaHRtbHtcbiAgZm9udC1zaXplOiA2Mi41JTtcbiAgYm94LXNpemluZzogYm9yZGVyLWJveDsgLyogVG8gSGFkbmxlIEJveCBJbiBUaGUgQm9keSovXG59XG5cbmJvZHl7XG4gIG1hcmdpbjogMDtcbiAgaGVpZ2h0OiAxMDB2aDtcbiAgZm9udC1zaXplOiAxLjZyZW07XG4gIGZvbnQtZmFtaWx5OiBBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmO1xuICAtd2Via2l0LWZvbnQtc21vb3RoaW5nOiBhbnRpYWxpYXNlZDtcbiAgLW1vei1vc3gtZm9udC1zbW9vdGhpbmc6IGdyYXlzY2FsZTtcbn1cblxuI3Jvb3R7XG4gIGhlaWdodDogMTAwJTtcbn1cblxuLmdyaWQtY29udGFpbmVye1xuICBkaXNwbGF5OiBncmlkO1xuICBncmlkLXRlbXBsYXRlLWFyZWFzOiBcbiAgJ2hlYWRlcidcbiAgJ21haW4nXG4gICdmb290ZXInO1xuICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IDFmcjtcbiAgZ3JpZC10ZW1wbGF0ZS1yb3dzOiA1cmVtIDFmciA1cmVtO1xuICBoZWlnaHQ6IDEwMCU7XG59XG5cblxuaGVhZGVye1xuICBncmlkLWFyZWE6IGhlYWRlcjtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzIwMzA0MDtcbiAgXG59XG5tYWlue1xuICBncmlkLWFyZWE6IG1haW47XG4gIHBhZGRpbmc6IDFyZW07XG59XG5cbmF7XG4gIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbn1cbmE6aG92ZXJ7XG4gIGNvbG9yOiBjaG9jb2xhdGU7XG59XG5cbmEuYnJhbmR7ICAvKiAgIGEgdGhhdCBoYXZlIGJyYW5kIGNsYXNzICovXG4gIGNvbG9yOiB3aGl0ZTtcbiAgZm9udC1zaXplOiAzcmVtO1xuICBmb250LXdlaWdodDogYm9sZDtcbn1cbmhlYWRlciBheyAgLyogIEFsbCBhIEluc2lkZSBIZWFkZXIgKi9cbiAgY29sb3I6IHdoaXRlO1xuICBwYWRkaW5nOiAxcmVtO1xufVxuXG5mb290ZXJ7XG4gIGdyaWQtYXJlYTogZm9vdGVyO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMjAzMDQwO1xuICBjb2xvcjogYmxhbmNoZWRhbG1vbmQ7XG59XG5cbi5yb3d7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtd3JhcDogd3JhcDtcbiAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xufVxuXG4ucm93LmNlbnRlcntcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG59XG5cbi8qIEltYWdlICovXG5cbmltZy5tZWRpdW17XG4gIG1heC13aWR0aDogMjlyZW07XG4gIHdpZHRoOiAxMDAlO1xufVxuXG5pbWd7XG4gIGJvcmRlci1yYWRpdXM6IDAuNXJlbTtcbn1cblxuLyogQ2FyZCAqL1xuXG4ucHJvZHVjdHtcbiAgYm9yZGVyOiAwLjFyZW0gI2MwYzBjMCBzb2xpZDtcbiAgYmFja2dyb3VuZC1jb2xvcjojZjhmOGY4O1xuICBib3JkZXItcmFkaXVzOiAwLjVyZW07XG4gIG1hcmdpbjogMXJlbTtcbn1cblxuaDF7XG4gIGZvbnQtc2l6ZTogMS44cmVtO1xuICBwYWRkaW5nOiAxcmVtIDA7XG59XG5cbmgye1xuICBmb250LXNpemU6IDEuNnJlbTtcbiAgcGFkZGluZzogMXJlbSAwO1xufVxuXG5oM3tcbiAgZm9udC1zaXplOiAxLjJyZW07XG4gIGNvbG9yOiBncmV5O1xufVxuXG4uY2FyZC1ib2R5XG57XG4gIHBhZGRpbmc6IDFyZW07XG59XG5cbi8qIEFsbCBDaGlsZHJlbiBPZiBjYXJkLWJvZHkqL1xuXG4uY2FyZC1ib2R5ID4gKiB7XG4gIG1hcmdpbi1ib3R0b206IDAuNXJlbTtcbn1cblxuLnJhdGluZyBzcGFue1xuICBjb2xvcjogZ29sZGVucm9kO1xufVxuXG5zcGFuLnJldmlld3tcbiAgY29sb3I6IGJsYWNrO1xuICBmb250LWZhbWlseTogYXJlYTtcbn1cblxuLnByaWNle1xuICBmb250LXNpemU6IDJyZW07XG4gIGZvbnQtZmFtaWx5OiBjdXJzaXZlO1xuICBmb250LXdlaWdodDogYm9sZDtcbn1cblxuXG5cblxuXG5cblxuXG5cbiJdLCJzb3VyY2VSb290IjoiIn0= */</style></head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"><div class="grid-container"><header class="row"><div><a class="brand" href="http://localhost:3000/">Home</a></div><div><a href="http://localhost:3000/cart">Cart</a><a href="http://localhost:3000/login">Login</a></div></header><main></main><footer class="row center">Copyright 2021</footer></div></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  <script src="./React App_files/bundle.js"></script><script src="./React App_files/vendors_main.chunk.js"></script><script src="./React App_files/main.chunk.js"></script>
+
+</body></html>

@@ -1,4 +1,4 @@
-const data ={
+const data = {
     products:[
         {
             _id: '1',
@@ -60,6 +60,6 @@ const data ={
             stock: 45
         }
     ]
-};
+}
 
 export default data;
