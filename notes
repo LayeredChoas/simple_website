@@ -1,2 +1,0 @@
-axios => handle sending AJAX request to server
-proxy: 127.0.0.1:PORT_BACKEND to frontend packge.js
